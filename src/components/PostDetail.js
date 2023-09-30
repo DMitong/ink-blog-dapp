@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { useTipOnPost } from "./hooks/useTipOnPost";
-import TipButton from "./TipButton";
+// import { useTipOnPost } from "./hooks/useTipOnPost";
+import TipButton, {handleTipChange} from "./TipButton";
 
 const PostDetail = ({ post }) => {
   const [tipAmount, setTipAmount] = useState(0);
-  const { tipOnPost } = useTipOnPost();
+  // const { tipOnPost } = useTipOnPost();
 
   const handleTip = () => {
-    tipOnPost(post.id, tipAmount);
+    handleTipChange(post.id, tipAmount);
   };
 
   return (

@@ -1,18 +1,19 @@
 import React from "react";
-import { InkProvider, UserProvider } from "./contexts";
-import { InkContract } from "./contracts/Ink";
-import { Homepage } from "./pages/Homepage";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { UserProvider } from "./context/UserContext";
+import Homepage from "./pages/HomePage";
+import PostDetailPage from "./pages/PostDetailsPage";
+import CreatePostPage from "./pages/CreatePost";
 
 const App = () => {
-  const inkContract = new InkContract(process.env.INK_CONTRACT_ADDRESS);
-  const user = null; // TODO: Get the current user from the Ink smart contract
-
   return (
-    <InkProvider inkContract={inkContract}>
-      <UserContext.Provider value={user}>
-        <Homepage />
-      </UserContext.Provider>
-    </InkProvider>
+    <Router>
+      <UserProvider>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/posts/:postId" component={PostDetailPage} />
+          <Route path="/create-post" component={CreatePostPage} />
+      </UserProvider>
+    </Router>
   );
 };
 

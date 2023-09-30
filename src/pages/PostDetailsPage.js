@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { usePost } from "./hooks/usePost";
-import PostDetail from "./components/PostDetail";
+import { usePost } from "../hooks/usePost";
+import TipButton from "../components/TipButton";
+import PostDetail from "../components/PostDetail";
 
 const PostDetailPage = ({ match }) => {
   const [post, setPost] = useState(null);
@@ -18,6 +19,7 @@ const PostDetailPage = ({ match }) => {
   return (
     <div>
       <PostDetail post={post} />
+      <TipButton postId={post.id} />
     </div>
   );
 };

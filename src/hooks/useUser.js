@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Ink } from "../contracts/Ink";
 
+// Add this to your useUser hook
 export const useUser = (userAddress) => {
   const inkContract = useInkContract();
   const [user, setUser] = useState(null);
@@ -11,7 +12,9 @@ export const useUser = (userAddress) => {
       setUser(user);
     }
 
-    fetchUser();
+    if (userAddress) {
+      fetchUser();
+    }
   }, [inkContract, userAddress]);
 
   return { user };

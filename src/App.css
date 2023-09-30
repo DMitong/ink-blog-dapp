@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+/* main.css */
+
+body {
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: #000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* post-list.css */
+
+.post-list {
+  list-style: none;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.post-list-item {
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post-list-item a {
+  color: #000000;
+}
+
+.post-list-item h3 {
+  font-size: 16px;
+}
+
+.post-list-item p {
+  font-size: 14px;
+}
+
+/* post.css */
+
+.post {
+  margin-bottom: 20px;
+}
+
+.post h3 {
+  font-size: 20px;
+}
+
+.post p {
+  font-size: 16px;
+}
+
+/* post-detail.css */
+
+.post-detail {
+  margin-bottom: 20px;
+}
+
+.post-detail h1 {
+  font-size: 24px;
+}
+
+.post-detail p {
+  font-size: 18px;
+}
+
+/* create-post.css */
+
+.create-post {
+  margin-bottom: 20px;
+}
+
+.create-post input,
+.create-post textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+}
+
+.create-post button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }

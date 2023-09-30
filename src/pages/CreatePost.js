@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useInkContract } from "./hooks/useInkContract";
-import CreatePost from "./components/CreatePost";
+import { useInkContract } from "../hooks/useInkContract.js";
+import CreatePost from "../components/CreatePost.js";
 
 const CreatePostPage = () => {
   const [content, setContent] = useState("");

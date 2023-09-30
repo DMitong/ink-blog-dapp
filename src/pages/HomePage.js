@@ -1,10 +1,10 @@
 import React from "react";
-import { useInkContract, useUser } from "./contexts";
-import { PostList } from "./components/PostList";
+import { InkContext, UserContext } from "../context";
+import { PostList } from "../components/PostList";
 
 const Homepage = () => {
-  const inkContract = useInkContract();
-  const user = useUser();
+  const inkContract = InkContext();
+  const user = UserContext();
 
   // Get all posts from the Ink smart contract
   const posts = inkContract.getPosts(0, 100);

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Ink } from "../contracts/Ink";
+import { useState, useEffect } from "react";
+import { InkAddress } from "../constants/addresses";
 
 // useInkContract hook
 export const useInkContract = () => {
   const [inkContract, setInkContract] = useState(null);
 
   useEffect(() => {
-    const inkContract = new Ink(process.env.INK_CONTRACT_ADDRESS);
+    const inkContract = new InkAddress();
     setInkContract(inkContract);
   }, []);
 

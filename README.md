@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Contracts
+The smart contracts that this dApp interacts with are deployed to the Sepolia testnet at these address:
+1. Ink Token Contract: 0x26A26aC51998374243B5512C56c14A05F03363Ea
+2. Ink Blog Contract: 0x4F1048368ef01666C4698702b9a71C2519F24452
+
 ## Available Scripts
 
 In the project directory, you can run:

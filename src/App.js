@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { InkProvider, UserProvider } from "./contexts";
+import { InkContract } from "./contracts/Ink";
+import { Homepage } from "./pages/Homepage";
 
-function App() {
+const App = () => {
+  const inkContract = new InkContract(process.env.INK_CONTRACT_ADDRESS);
+  const user = null; // TODO: Get the current user from the Ink smart contract
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <InkProvider inkContract={inkContract}>
+      <UserContext.Provider value={user}>
+        <Homepage />
+      </UserContext.Provider>
+    </InkProvider>
   );
-}
+};
 
 export default App;

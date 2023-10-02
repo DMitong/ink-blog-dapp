@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { useInkContract } from "./hooks/useInkContract";
+import { useInkContract } from "../hooks/useInkContract";
 
 const CreatePost = ({ onSubmit }) => {
   const [title, setTitle] = useState("");

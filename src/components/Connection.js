@@ -90,6 +90,50 @@ const Connection = () => {
                                             </button>
                                         )}
                                     </Menu.Item>
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <button
+                                                onClick={() =>
+                                                    switchToChain(
+                                                        supportedChains[2]
+                                                    )
+                                                }
+                                                className={`${
+                                                    active
+                                                        ? "bg-blue-400 text-white"
+                                                        : "text-gray-900"
+                                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                            >
+                                                {
+                                                    networkInfoMap[
+                                                        supportedChains[2]
+                                                    ].chainName
+                                                }
+                                            </button>
+                                        )}
+                                    </Menu.Item>
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <button
+                                                onClick={() =>
+                                                    switchToChain(
+                                                        supportedChains[3]
+                                                    )
+                                                }
+                                                className={`${
+                                                    active
+                                                        ? "bg-blue-400 text-white"
+                                                        : "text-gray-900"
+                                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                            >
+                                                {
+                                                    networkInfoMap[
+                                                        supportedChains[3]
+                                                    ].chainName
+                                                }
+                                            </button>
+                                        )}
+                                    </Menu.Item>
                                 </div>
                             </Menu.Items>
                         </Transition>

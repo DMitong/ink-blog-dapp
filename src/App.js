@@ -1,20 +1,36 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { UserProvider } from "./context/UserContext";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Header from "./components/Header";
 import Homepage from "./pages/HomePage";
 import PostDetailPage from "./pages/PostDetailsPage";
 import CreatePostPage from "./pages/CreatePost";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
+  const router = createBrowserRouter([
+    {
+            path: "/",
+            element: <Homepage />,
+        },
+        {
+            path: "/posts/:postId",
+            element: <PostDetailPage />,
+        },
+        {
+          path: "/create-post",
+          element: <CreatePostPage />,
+        },
+    ]);
   return (
-    <Router>
-      <UserProvider>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/posts/:postId" component={PostDetailPage} />
-          <Route path="/create-post" component={CreatePostPage} />
-      </UserProvider>
-    </Router>
+    <div className="App">
+            <Header />
+            <main className="mt-10">
+                <RouterProvider router={router} />
+            </main>
+            <ToastContainer />
+        </div>
   );
-};
+}
 
 export default App;

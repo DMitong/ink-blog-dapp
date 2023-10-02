@@ -1,17 +1,20 @@
 import React from "react";
-import { InkContext, UserContext } from "../context";
-import { PostList } from "../components/PostList";
+// import { UserContext } from "../context/UserContext";
+// import { InkContext } from "../context/InkContext";
+import CreatePost from "../components/CreatePost";
+import PostList from "../components/PostList";
 
 const Homepage = () => {
-  const inkContract = InkContext();
-  const user = UserContext();
+  // const inkContract = useContext(InkContext); // Use useContext to access InkContext
+  // const user = useContext(UserContext); // Use useContext to access UserContext
 
   // Get all posts from the Ink smart contract
-  const posts = inkContract.getPosts(0, 100);
+  // const posts = inkContract.getPosts(0, 100);
 
   return (
     <div>
-      <PostList posts={posts} user={user} />
+      <CreatePost />
+      <PostList />
     </div>
   );
 };

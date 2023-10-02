@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useInkContract from "../hooks/useInkContract";
+import { useInkContract } from "../hooks/useInkContract";
 
 export const usePost = (postId) => {
   const inkContract = useInkContract();

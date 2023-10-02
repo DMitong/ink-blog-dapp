@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { usePost } from "../hooks/usePost";
-import TipButton from "../components/TipButton";
+import { TipButton } from "../components/TipButton";
 import PostDetail from "../components/PostDetail";
 
 const PostDetailPage = ({ match }) => {
@@ -10,7 +10,7 @@ const PostDetailPage = ({ match }) => {
   useEffect(() => {
     const postId = match.params.postId;
     fetchPost(postId).then((post) => setPost(post));
-  }, [match]);
+  }, [match, fetchPost]);
 
   if (!post) {
     return <div>Loading...</div>;

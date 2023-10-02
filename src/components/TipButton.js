@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TipButton = ({ onTipChange, onTip }) => {
+export const TipButton = ({ onTipChange, onTip }) => {
   const [tipAmount, setTipAmount] = useState(0);
 
   const handleTipChange = (e) => {
@@ -25,4 +25,6 @@ const TipButton = ({ onTipChange, onTip }) => {
   );
 };
 
-export default TipButton;
+export function handleTipChange(e) {
+  // Function code
+}

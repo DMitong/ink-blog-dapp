@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 
-const InkContext = createContext(null);
+export const InkContext = createContext(null);
 
 export const InkProvider = ({ inkContract, children }) => {
   return (

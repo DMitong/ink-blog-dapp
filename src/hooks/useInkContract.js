@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { InkAddress } from "../constants/addresses";
+import { InkContractAddress } from "../constants/addresses";
 
 // useInkContract hook
 export const useInkContract = () => {
   const [inkContract, setInkContract] = useState(null);
 
   useEffect(() => {
-    const inkContract = new InkAddress();
+    const inkContract = new InkContractAddress();
     setInkContract(inkContract);
   }, []);
 
